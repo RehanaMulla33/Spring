@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- bean definitions here -->
+	<bean id="animeCharacter"
+		class="com.xworkz.animation.AnimeCharacter"></bean>
+	<bean id="laptop" class="com.xworkz.animation.Laptop"></bean>
+	<bean id="doctor" class="com.xworkz.animation.Doctor"></bean>
+	<bean id="minister" class="com.xworkz.animation.Minister"></bean>
+	<bean id="corona" class="com.xworkz.animation.Corona"></bean>
+	<bean id="string" class="java.lang.String"></bean>
+
+	<bean id="juice" class="com.xworkz.animation.Juice"></bean>
+	<bean id="juice1" class="com.xworkz.animation.Juice"></bean>
+
+
+	<bean id="paint" class="com.xworkz.animation.Paint"></bean>
+	<bean id="paint1" class="com.xworkz.animation.Paint "></bean>
+
+	<bean id="mask" class="com.xworkz.animation.Mask"></bean>
+	<bean id="mask1" class="com.xworkz.animation.Mask"></bean>
+
+	<bean id="sim" class="com.xworkz.animation.SimCard"></bean>
+	<bean id="sim1" class="com.xworkz.animation.SimCard"></bean>
+
+	<bean id="purify" class="com.xworkz.animation.Purifier"></bean>
+	<bean id="purify1" class="com.xworkz.animation.Purifier"></bean>
+
+	<bean id="tablet" class="com.xworkz.animation.Tablet"></bean>
+	<bean id="tablet1" class="com.xworkz.animation.Tablet"></bean>
+
+	<bean id="steamer" class="com.xworkz.animation.Steamer"></bean>
+	<bean id="steamer1" class="com.xworkz.animation.Steamer"></bean>
+
+	<bean id="oximeter" class="com.xworkz.animation.Oximeter"></bean>
+	<bean id="oximeter1" class="com.xworkz.animation.Oximeter"></bean>
+
+	<bean id="tissue" class="com.xworkz.animation.Tissue"></bean>
+	<bean id="tissue1" class="com.xworkz.animation.Tissue"></bean>
+
+	<bean id="sanitizer" class="com.xworkz.animation.Sanitizer"></bean>
+	<bean id="sanitizer1" class="com.xworkz.animation.Sanitizer"></bean>
+
+
+
+
+
+
+
+</beans>
