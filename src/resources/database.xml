@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- bean definitions here -->
+
+	<bean id="travellerImpl"
+		class="com.xworkz.transport.TravellerImpl">
+		<constructor-arg value="Deepali"></constructor-arg>
+		<constructor-arg value="30"></constructor-arg>
+
+		<property name="mad" value="false"></property>
+		<property name="travels" value="jaipur"></property>	
+	</bean>
+	
+	<bean id="travelsImpl" class="com.xworkz.transport.TravelsImpl"> 
+			<property name="name" value="VRL"></property>
+		<property name="travels" ref="travellerImpl"></property>	
+	
+	</bean>
+	<bean id="transportImpl" class="com.xworkz.transport.TransportImpl">
+				<property name="type" value="Bus"></property>
+		<property name="transport" ref="travelsImpl"></property>	
+	
+	</bean>
+
+</beans>
