@@ -1,5 +1,6 @@
 package com.xworkz.passport.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import java.util.Date;
@@ -21,10 +22,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 
-
 @Entity
 @Table(name = "passport_entity")
-
 
 public class PassportEntity {
 	@Column(name = "p_id")
@@ -49,18 +48,18 @@ public class PassportEntity {
 	@Column(name = "p_passportpersonneltype")
 	private PassportPersonnelType passportpersonneltype;
 	@Column(name = "p_dob")
-	private Date dob;	
+	private LocalDateTime dob;
 	@Column(name = "p_bloodgrop")
 	private BloodGroup bloodgrop;
 	@Column(name = "p_verifiedDocument")
 	private VerifiedDocument verifiedDocument;
-	
-	public PassportEntity(int id, String issuedBy, LocalDateTime issuedAt, LocalDateTime expiresAt, Gender gender,
+
+	public PassportEntity(String issuedBy, LocalDateTime issuedAt, LocalDateTime expiresAt, Gender gender,
 			String passportNo, String address, String fName, boolean legalIssue,
-			PassportPersonnelType passportpersonneltype, Date dob, BloodGroup bloodgrop,
+			PassportPersonnelType passportpersonneltype, LocalDateTime dob, BloodGroup bloodgrop,
 			VerifiedDocument verifiedDocument) {
 		super();
-		this.id = id;
+
 		this.issuedBy = issuedBy;
 		this.issuedAt = issuedAt;
 		this.expiresAt = expiresAt;
@@ -74,11 +73,5 @@ public class PassportEntity {
 		this.bloodgrop = bloodgrop;
 		this.verifiedDocument = verifiedDocument;
 	}
-	
-	
 
 }
-
-
-
-

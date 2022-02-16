@@ -1,17 +1,18 @@
 package com.xworkz.passport.service;
 
+import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.springframework.core.io.buffer.DataBufferUtils.Matcher;
-
+import com.xworkz.passport.constants.PassportPersonnelType;
 import com.xworkz.passport.entity.PassportEntity;
 import com.xworkz.passport.repository.PassportRepository;
 
 public class PassportServiceImpl implements PassportService {
 	private PassportRepository repository;
 
-	public void PassportServiceImpl(PassportRepository repository) {
+	public PassportServiceImpl(PassportRepository repository) {
 		this.repository = repository;
 	}
 
@@ -20,6 +21,28 @@ public class PassportServiceImpl implements PassportService {
 	@Override
 	public boolean saveAndValidate(PassportEntity entity) {
 		boolean valid = true;
+		if (entity.getPassportpersonneltype().equals(PassportPersonnelType.Regular)) {
+			if (entity.getExpiresAt() != null && entity.getExpiresAt().isAfter(entity.getIssuedAt().plusYears(10))) {
+				valid = true;
+			} else {
+				System.out.println("Regular passport expired");
+				return valid;
+			}
+		} else {
+			if (entity.getExpiresAt() != null && entity.getExpiresAt().isAfter(entity.getIssuedAt().plusYears(10))) {
+				valid = true;
+			} else {
+				System.out.println("Diplomatic passport expired");
+				return valid;
+			}
+		}
+
+		if (entity.getVerifiedDocument() != null) {
+			valid = true;
+		} else {
+			System.out.println("Invalid Documnent");
+		}
+
 		if ((entity.getFName() != null && !(entity.getFName().isEmpty()) && entity.getFName().length() > 3
 				&& entity.getFName().length() < 200)) {
 			valid = true;
@@ -94,33 +117,18 @@ public class PassportServiceImpl implements PassportService {
 			valid = false;
 			return valid;
 		}
-		if (entity.getExpiresAt().plusYears(10) != null && entity.getPassportpersonneltype().Regular != null) {
+		LocalDateTime today = LocalDateTime.now();
+		if (entity.getDob() != null && entity.getDob().isBefore(today)) {
 			valid = true;
 		} else {
-			System.out.println("Invalid Expiry of Regular ");
+			System.out.println("invalid dob");
 			valid = false;
 			return valid;
-		}
-		if (entity.getDob() != null) {
-			System.out.println("DOB" + date.before(date));
-			valid = true;
-		} else {
-			System.out.println("Invalid dob ");
-			valid = false;
-			return valid;
-		}
-		if (entity.getExpiresAt().plusYears(5) != null && entity.getPassportpersonneltype().Diplomatic != null) {
 
-			valid = true;
-
-		} else {
-			System.out.println("Invalid Expiry of Diplomatic ");
-			valid = false;
-			return valid;
 		}
-		repository.save(entity);
-
-		return valid;
+		if (valid) {
+			repository.save(entity);
+		}
+		return false;
 	}
-
 }

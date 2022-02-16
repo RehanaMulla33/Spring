@@ -1,7 +1,7 @@
 package com.xworkz.passport.constants;
 
 public enum PassportPersonnelType {
-	Regular('R'),Diplomatic('C');
+	Regular('R'),Diplomatic('D');
 	
 	private char value;
 	
