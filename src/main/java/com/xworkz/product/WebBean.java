@@ -8,15 +8,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.xworkz.product.entity.ProductEntity;
 import com.xworkz.product.service.ProductService;
 @Component
+@RequestMapping("/")
 public class WebBean {
-	private ProductService service;
 	@Autowired
+	private ProductService service;
+	
 
 	public WebBean() {
 		System.out.println("Created " + this.getClass().getSimpleName());
 	}
-
-	@RequestMapping("prod.do")
+	@RequestMapping("/prod.do")
 	public String saveProduct(@RequestParam String pName, @RequestParam String pType,
 			@RequestParam String pQuantity, @RequestParam double price) {
 		System.out.println("Invoked product method");

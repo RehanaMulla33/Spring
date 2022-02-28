@@ -5,7 +5,7 @@
 	version="4.0">
 	<display-name>spring-amazon-web</display-name>
   <welcome-file-list>
-    <welcome-file>product.html</welcome-file>
+    <welcome-file>Product.html</welcome-file>
   </welcome-file-list>
   
   <servlet>
@@ -22,8 +22,6 @@
   
   <servlet-mapping>
   <servlet-name >dispatcherServlet</servlet-name>
-  <url-pattern>prod.do</url-pattern>
-  </servlet-mapping>
-   
-  
+  <url-pattern>/prod.do</url-pattern>
+  </servlet-mapping>  
 </web-app>

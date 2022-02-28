@@ -13,13 +13,14 @@ import com.xworkz.product.entity.ProductEntity;
 @Component
 
 public class ProductRepositoryImpl implements ProductRepository {
+	@Autowired
 	private EntityManagerFactory entityManagerFactory;
 
 	public ProductRepositoryImpl(EntityManagerFactory entityManagerFactory) {
 		this.entityManagerFactory = entityManagerFactory;
 	}
 
-	@Autowired
+	
 
 	@Override
 	public void save(ProductEntity entity) {

@@ -1,19 +1,19 @@
 package com.xworkz.product.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.xworkz.product.entity.ProductEntity;
 import com.xworkz.product.repository.ProductRepository;
 @Component
 public class ProductServiceImpl implements ProductService {
+	
 	private ProductRepository repository;
 
 	public ProductServiceImpl(ProductRepository repository) {
 		this.repository = repository;
 	}
 
-	@Autowired
+
 	@Override
 	public boolean saveAndValidate(ProductEntity entity) {
 		boolean valid = true;
