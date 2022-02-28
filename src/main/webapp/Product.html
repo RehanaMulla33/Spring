@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Welcome to Product Page</h1>
+	<form action="prod.do">
+
+		<div>
+			<label>Name</label> <input type="text" name="pName" />
+		</div>
+
+		<div>
+			<label for="Product Type">Product Type</label> <select name="pType"
+				id="pType">
+				<option value="GoodsAndServices">GoodsAndServices</option>
+				<option value="Industrial">--Industrial --</option>
+				<option value="DurableProduct">--DurableProduct--</option>
+				<option value="Automobile">--Automobile --</option>
+				<option value="Primary">--Primary--</option>
+				<option value="Agricultural">--Agricultural--</option>
+				<option value="Natural">--Natural--</option>
+
+			</select>
+		</div>
+
+		<div>
+			<label for="quantity">Quantity</label><select name="pQuantity"
+				id="pQuantity">
+				<option value=" Kilo">Kilo</option>
+				<option value="Ltr">Ltr</option>
+				<option value="kg">kg</option>
+				<option value="Grams">Grams</option>
+				<option value="Quintal">Quintal</option>
+			</select>
+		</div>
+
+		<div>
+			<label>Price</label> <input type="text" name="price" />
+		</div>
+		<div>
+			<input type="submit" name="click here">
+		</div>
+	</form>
+</body>
+</html>
