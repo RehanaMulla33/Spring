@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<span style="color: red;"> ${message} </span>
-		<h1>Grocery Lists</h1>
-	
+
+	<h1>Grocery Lists</h1>
+
 	<form action="additem.do" method="post">
 		<div>
 			<label>Name </label> <select name="name" id="name ">
@@ -101,8 +101,9 @@
 
 			</select>
 		</div>
+		<input type="submit" value="AddItem">
+
 	</form>
-	<input type="submit" value="AddItem">
 	<a href="Search.jsp">search</a>
 
 </body>

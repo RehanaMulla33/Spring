@@ -6,6 +6,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
 import javax.persistence.Query;
+import javax.persistence.RollbackException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -16,9 +17,9 @@ public class GroceryRepositoryImpl implements GroceryRepository {
 	@Autowired
 	private EntityManagerFactory entityManagerFactory;
 
-	public GroceryRepositoryImpl(EntityManagerFactory entityManagerFactory) {
-		this.entityManagerFactory = entityManagerFactory;
-	}
+//	public GroceryRepositoryImpl(EntityManagerFactory entityManagerFactory) {
+//		this.entityManagerFactory = entityManagerFactory;
+//	}
 
 	@Override
 	public void save(GroceryEntity entity) {
@@ -31,7 +32,9 @@ public class GroceryRepositoryImpl implements GroceryRepository {
 			transaction.commit();
 
 		} catch (PersistenceException e) {
+			transaction.rollback();
 			e.printStackTrace();
+			
 
 		} finally {
 			if (manager != null) {

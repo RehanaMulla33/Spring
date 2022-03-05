@@ -1,25 +1,29 @@
 package com.xworkz.grocery.service;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.xworkz.grocery.dto.GroceryDTO;
 import com.xworkz.grocery.entity.GroceryEntity;
+import com.xworkz.grocery.repository.GroceryRepository;
 import com.xworkz.grocery.repository.GroceryRepositoryImpl;
 
 @Service
 public class GroceryServiceImpl implements GroceryService {
 	@Autowired
-	private GroceryRepositoryImpl repository;
+	private GroceryRepository repository;
 
-	public GroceryServiceImpl(GroceryRepositoryImpl repository) {
+	public GroceryServiceImpl(GroceryRepository repository) {
 		this.repository = repository;
+		System.out.println("invoked service method");
 	}
 
 	@Override
 	public boolean validateAndSave(GroceryEntity entity) {
 		boolean valid = true;
+
+		// this.repository.save(entity);
+
 		if (entity.getName() != null && !(entity.getName().isEmpty()) && entity.getName().length() > 3
 				&& entity.getName().length() < 200) {
 			valid = true;
@@ -35,7 +39,7 @@ public class GroceryServiceImpl implements GroceryService {
 			valid = false;
 			return valid;
 		}
-		if (entity.getBrand() != null && !(entity.getBrand().isEmpty()) && entity.getBrand().length() > 3
+		if (entity.getBrand() != null && !(entity.getBrand().isEmpty()) && entity.getBrand().length() > 2
 				&& entity.getBrand().length() < 200) {
 			valid = true;
 		} else {
@@ -58,10 +62,13 @@ public class GroceryServiceImpl implements GroceryService {
 			valid = false;
 			return valid;
 		}
-
 		if (valid) {
 			repository.save(entity);
-			valid = true;
+			System.out.println("valid data");
+			return valid;
+		} else {
+			System.out.println("Invalid data");
+			valid = false;
 		}
 		return valid;
 	}
