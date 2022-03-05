@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Grocery Lists</h1>
 	<span style="color: red;"> ${message} </span>
-	<form action="addItem.do" method="post">
+		<h1>Grocery Lists</h1>
+	
+	<form action="additem.do" method="post">
 		<div>
-			<label for="Nmae">Name </label> <select name="name" id="Gname ">
+			<label>Name </label> <select name="name" id="name ">
+				<option value="select">select</option>
+
 				<option value="Pulses">Fortune oil</option>
 				<option value="Green">--Garam Masala --</option>
 				<option value="Black">--Black gram--</option>
@@ -33,12 +36,13 @@
 				<option value="Pepsi">--Pepsi --</option>
 				<option value="Aluiminium">--Aluiminium Foil --</option>
 				<option value="Pepsi">--Fruits/Vegtables --</option>
-				
+
 			</select>
 		</div>
 		<div>
-			<label for="quantity">Quantity</label><select name="Gquantity"
-				id="quantity">
+			<label>Quantity</label><select name="quantity" id="quantity">
+				<option value="select">select</option>
+
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -55,10 +59,12 @@
 			</select>
 		</div>
 		<div>
-			<label>Price</label> <input type="text" name="Gprice" />
+			<label>Price</label> <input type="text" name="price" />
 		</div>
 		<div>
-			<label for="type">Type</label> <select name="type" id="Gtype">
+			<label>Type</label> <select name="type" id="type">
+				<option value="select">select</option>
+
 				<option value="vegtables">vegtables</option>
 				<option value="Bread">--Bread/Bakery --</option>
 				<option value="Breakfast">--Breakfast--</option>
@@ -75,7 +81,9 @@
 			</select>
 		</div>
 		<div>
-			<label for="brand">Brand</label> <select name="brand" id="Gbrand">
+			<label>Brand</label> <select name="brand" id="brand">
+				<option value="select">select</option>
+
 				<option value="Kissan">Kissan</option>
 				<option value="Amul">--Amul --</option>
 				<option value="Haldiram's">--Haldiram's--</option>
@@ -90,11 +98,12 @@
 				<option value="Mother">--Mother dairy--</option>
 				<option value="DiSano">--DiSano --</option>
 				<option value="DiSano">--Pet --</option>
-				
+
 			</select>
 		</div>
-		</form>
-	<a href="AddItemResult.jsp">AddItem</a><br>
+	</form>
+	<input type="submit" value="AddItem">
+	<a href="Search.jsp">search</a>
 
 </body>
 </html>

@@ -1,9 +1,12 @@
 package com.xworkz.grocery.repository;
 
 import javax.persistence.EntityManager;
+
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
+import javax.persistence.Query;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.xworkz.grocery.entity.GroceryEntity;
@@ -32,11 +35,27 @@ public class GroceryRepositoryImpl implements GroceryRepository {
 
 		} finally {
 			if (manager != null) {
+				System.out.println("Data saved");
 				manager.close();
+			} else {
+				System.out.println("Data not saved");
+
 			}
 
 		}
 
 	}
 
+	@Override
+	public GroceryEntity findByName(String name) {
+		EntityManager manager = this.entityManagerFactory.createEntityManager();
+		try {
+			Query query = manager.createNamedQuery("findByName");
+			query.setParameter("nm", name);
+			return (GroceryEntity) query.getSingleResult();
+
+		} finally {
+			manager.close();
+		}
+	}
 }

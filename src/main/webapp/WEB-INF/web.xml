@@ -5,9 +5,7 @@
 	id="WebApp_ID" version="4.0">
 	<display-name>spring-grocery-list</display-name>
 	<welcome-file-list>
-		<welcome-file>LandingPage.jsp</welcome-file>
-		<welcome-file>AddItem.jsp</welcome-file>
-		<welcome-file>AddItemResult.jsp</welcome-file>
+		<welcome-file>Home.jsp</welcome-file>
 	</welcome-file-list>
 
 	<servlet>
@@ -21,19 +19,21 @@
 		</init-param>
 
 	</servlet>
-	
-		<servlet-mapping>
-		<servlet-name>dispatcherServlet</servlet-name>
-		<url-pattern>/onClick.do</url-pattern>
-	</servlet-mapping>
-	
+
 	<servlet-mapping>
 		<servlet-name>dispatcherServlet</servlet-name>
-		<url-pattern>/addItem.do</url-pattern>
+		<url-pattern>/item.do</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>dispatcherServlet</servlet-name>
-		<url-pattern>/addItemResult.do</url-pattern>
+		<url-pattern>/additem.do</url-pattern>
 	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<url-pattern>/search.do</url-pattern>
+	</servlet-mapping>
+
 </web-app>

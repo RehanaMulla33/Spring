@@ -7,12 +7,12 @@
 <title>Grocery Application</title>
 </head>
 <body>
-	<h1>Welcome to Reliance Grocery Mart</h1>
+	<h1>Grocery Application</h1>
 	<br>
-	<form action="onClick.do" method="post">
+	<form action="item.do" method="post">
 
 		<a href="AddItem.jsp">Clicke here to add Item</a><br>
-		<br> <a href="AddItemResult.jsp">Search Item</a>
+		
 	</form>
 </body>
 </html>

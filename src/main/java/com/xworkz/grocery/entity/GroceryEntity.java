@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -14,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "grocery_entity")
-
+@NamedQueries({@NamedQuery(name="findByName", query="select grocery from GroceryEntity grocery where grocery.name=:nm")})
 public class GroceryEntity {
 	@Id
 	@Column(name = "g_Id")
@@ -30,10 +32,7 @@ public class GroceryEntity {
 	private String type;
 	@Column(name = "g_Brand")
 	private String brand;
-//	@Column(name = "g_TotalPrice")
-//	private float totPrice;
 
-	
 	public GroceryEntity(String name, int quantity, float price, String type, String brand) {
 		super();
 		this.name = name;
@@ -42,7 +41,4 @@ public class GroceryEntity {
 		this.type = type;
 		this.brand = brand;
 	}
-	
-	
-
 }
