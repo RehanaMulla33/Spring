@@ -79,7 +79,6 @@ public class GroceryServiceImpl implements GroceryService {
 		} else {
 			System.out.println("Invalid Grocery Name");
 			valid = false;
-
 		}
 		if (valid) {
 			GroceryEntity entity = this.repository.findByName(name);
@@ -95,28 +94,36 @@ public class GroceryServiceImpl implements GroceryService {
 		}
 		return GroceryService.super.validateAndfindByName(name);
 	}
-	
+
 	@Override
-	public GroceryDTO validateAndUpdateByBrand(String name, String newbrand) {
+	public GroceryDTO validateAndUpdateByBrand(String name, String newBrand) {
 		boolean valid = true;
 
 		if (name != null && !(name.isEmpty()) && name.length() > 3 && name.length() < 200) {
 			valid = true;
 		} else {
-			System.out.println("Entered Grocery Name is invalid");
+			System.out.println("Grocery Name is invalid");
 			valid = false;
 		}
-		if(valid) {
-			GroceryEntity val = this.repository.findByName(name);
-			if(val != null) {
-				System.out.println("Valid grocery item");
-				repository.upadteByBrand(name, newbrand);
-			}
-			System.out.println("updated brand  :"+val);
-		}else {
-			System.out.println("Invalid Grocery name :"+name);	
-			}
-		
-		return GroceryService.super.validateAndUpdateByBrand(name, newbrand);
+		if (newBrand != null && !(newBrand.isEmpty()) && newBrand.length() > 2 && newBrand.length() < 200) {
+			valid = true;
+		} else {
+			System.out.println(" Grocery newBrand is invalid");
+			valid = false;
+		}
+
+		if (valid) {
+			GroceryEntity entity = this.repository.upadteByBrand(name, newBrand);
+			GroceryDTO dto = new GroceryDTO();
+			dto.setName(entity.getName());
+			dto.setQuantity(entity.getQuantity());
+			dto.setPrice(entity.getPrice());
+			dto.setType(entity.getType());
+			dto.setBrand(entity.getBrand());
+
+			return dto;
+		}
+
+		return GroceryService.super.validateAndUpdateByBrand(name, newBrand);
 	}
 }

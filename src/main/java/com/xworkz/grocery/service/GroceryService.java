@@ -10,7 +10,7 @@ public interface GroceryService {
 		return null;
 	}
 
-	default GroceryDTO validateAndUpdateByBrand(String name, String newbrand) {
+	default GroceryDTO validateAndUpdateByBrand(String name, String newBrand) {
 		return null;
 	}
 

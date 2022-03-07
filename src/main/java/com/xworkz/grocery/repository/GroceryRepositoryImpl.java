@@ -68,7 +68,7 @@ public class GroceryRepositoryImpl implements GroceryRepository {
 			query.setParameter("nm", name);
 			query.setParameter("bnd", brand);
 
-			int obj = query.executeUpdate();
+			Object obj = query.executeUpdate();
 			transaction.commit();
 			
 		} catch (PersistenceException e) {
