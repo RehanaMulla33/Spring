@@ -6,7 +6,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
 import javax.persistence.Query;
-import javax.persistence.RollbackException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -17,9 +16,9 @@ public class GroceryRepositoryImpl implements GroceryRepository {
 	@Autowired
 	private EntityManagerFactory entityManagerFactory;
 
-//	public GroceryRepositoryImpl(EntityManagerFactory entityManagerFactory) {
-//		this.entityManagerFactory = entityManagerFactory;
-//	}
+	public GroceryRepositoryImpl(EntityManagerFactory entityManagerFactory) {
+		this.entityManagerFactory = entityManagerFactory;
+	}
 
 	@Override
 	public void save(GroceryEntity entity) {
@@ -34,7 +33,6 @@ public class GroceryRepositoryImpl implements GroceryRepository {
 		} catch (PersistenceException e) {
 			transaction.rollback();
 			e.printStackTrace();
-			
 
 		} finally {
 			if (manager != null) {
@@ -60,5 +58,27 @@ public class GroceryRepositoryImpl implements GroceryRepository {
 		} finally {
 			manager.close();
 		}
+	}
+
+	public GroceryEntity updateByBrand(String name,String brand) {
+		EntityManager manager = this.entityManagerFactory.createEntityManager();
+		EntityTransaction transaction = manager.getTransaction();
+		try {
+			Query query = manager.createNamedQuery("updateByBrand");
+			query.setParameter("nm", name);
+			query.setParameter("bnd", brand);
+
+			int obj = query.executeUpdate();
+			transaction.commit();
+			
+		} catch (PersistenceException e) {
+			transaction.rollback();
+			e.printStackTrace();
+		} finally {
+			if (manager != null) {
+				manager.close();
+			}
+		}
+		return null;
 	}
 }

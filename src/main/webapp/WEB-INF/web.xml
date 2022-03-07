@@ -35,5 +35,11 @@
 		<servlet-name>dispatcherServlet</servlet-name>
 		<url-pattern>/search.do</url-pattern>
 	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<url-pattern>/update.do</url-pattern>
+	</servlet-mapping>
+	
 
 </web-app>

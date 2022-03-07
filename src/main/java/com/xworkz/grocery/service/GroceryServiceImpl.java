@@ -21,9 +21,6 @@ public class GroceryServiceImpl implements GroceryService {
 	@Override
 	public boolean validateAndSave(GroceryEntity entity) {
 		boolean valid = true;
-
-		// this.repository.save(entity);
-
 		if (entity.getName() != null && !(entity.getName().isEmpty()) && entity.getName().length() > 3
 				&& entity.getName().length() < 200) {
 			valid = true;
@@ -97,5 +94,29 @@ public class GroceryServiceImpl implements GroceryService {
 			return dto;
 		}
 		return GroceryService.super.validateAndfindByName(name);
+	}
+	
+	@Override
+	public GroceryDTO validateAndUpdateByBrand(String name, String newbrand) {
+		boolean valid = true;
+
+		if (name != null && !(name.isEmpty()) && name.length() > 3 && name.length() < 200) {
+			valid = true;
+		} else {
+			System.out.println("Entered Grocery Name is invalid");
+			valid = false;
+		}
+		if(valid) {
+			GroceryEntity val = this.repository.findByName(name);
+			if(val != null) {
+				System.out.println("Valid grocery item");
+				repository.upadteByBrand(name, newbrand);
+			}
+			System.out.println("updated brand  :"+val);
+		}else {
+			System.out.println("Invalid Grocery name :"+name);	
+			}
+		
+		return GroceryService.super.validateAndUpdateByBrand(name, newbrand);
 	}
 }

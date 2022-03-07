@@ -22,8 +22,11 @@ public class SearckController {
 	@RequestMapping("/search.do")
 	public String onSearch(@RequestParam String groceryName,Model model) {
 		GroceryDTO dto=this.groceryService.validateAndfindByName(groceryName);
+		
 		if(dto!=null) {
-			model.addAttribute(groceryName, dto);
+			model.addAttribute("grocery", dto);
+			System.out.println(dto.toString());
+
 		}
 		else {
 			model.addAttribute("message", "grocery is not found");

@@ -12,6 +12,8 @@
 	<form action="item.do" method="post">
 
 		<a href="AddItem.jsp">Clicke here to add Item</a><br>
+				<a href="Search.jsp">Clicke here to search Item</a><br>
+		
 		
 	</form>
 </body>

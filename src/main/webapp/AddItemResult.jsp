@@ -15,7 +15,7 @@
 		<label>Quantity:</label>${grocery.quantity}<br> 
 		<label>Price :</label>${grocery.price}<br>
 		<label>Brand :</label>${grocery.brand}<br> 
-		<label>Total :</label>${message1}<br><br>
+		<label>Total :</label>${messageTotal}<br><br>
 
 	</form>
 

@@ -16,7 +16,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "grocery_entity")
-@NamedQueries({@NamedQuery(name="findByName", query="select grocery from GroceryEntity grocery where grocery.name=:nm")})
+@NamedQueries({
+		@NamedQuery(name = "findByName", query = "select grocery from GroceryEntity grocery where grocery.name=:nm"),
+		@NamedQuery(name = "updateByBrand", query = "update GroceryEntity  set brand= :bnd where name= :nm") })
 public class GroceryEntity {
 	@Id
 	@Column(name = "g_Id")

@@ -12,9 +12,9 @@
 <input type="text" name="groceryName"/>
 <input type="submit" name="search"/>
 </form>
-
-<h2>${message}</h2>
 <div>
+<h2>${message}</h2>
+
 <label>grocery Name</label>:${grocery.name }<br>
 
 <label>grocery Quantity</label>:${grocery.quantity }<br>
@@ -25,6 +25,7 @@
 
 <label>grocery Price</label>: <input type="text" value="${grocery.price}" name="price"/><br>
 </div>
+		<a href="Home.jsp">Clicke here to add Item</a><br>
 
 </body>
 </html>

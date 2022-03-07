@@ -8,4 +8,8 @@ public interface GroceryRepository{
 		return null;
 		
 	}
+	default GroceryEntity upadteByBrand(String name,String brand) {
+		return null;
+		
+	}
 }
