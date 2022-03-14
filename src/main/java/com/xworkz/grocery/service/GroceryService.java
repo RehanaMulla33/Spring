@@ -1,5 +1,7 @@
 package com.xworkz.grocery.service;
 
+import java.util.List;
+
 import com.xworkz.grocery.dto.GroceryDTO;
 import com.xworkz.grocery.entity.GroceryEntity;
 
@@ -10,8 +12,15 @@ public interface GroceryService {
 		return null;
 	}
 
-	default GroceryDTO validateAndUpdateByBrand(String name, String newBrand) {
+	default GroceryDTO validateAndUpdateByName(String name,int quantity,float price,String type,String brand) {
 		return null;
 	}
+	
+	//boolean validateAndUpdate(String name,int quantity,float price,String type,String brand);
+	boolean validateAndDelete(String name);
+	
+	List<Object>getAllGrocery();
+
 
 }
+

@@ -20,11 +20,7 @@
 
 	</servlet>
 
-	<servlet-mapping>
-		<servlet-name>dispatcherServlet</servlet-name>
-		<url-pattern>/item.do</url-pattern>
-	</servlet-mapping>
-
+	
 	<servlet-mapping>
 		<servlet-name>dispatcherServlet</servlet-name>
 		<url-pattern>/additem.do</url-pattern>
@@ -40,4 +36,16 @@
 		<servlet-name>dispatcherServlet</servlet-name>
 		<url-pattern>/update.do</url-pattern>
 	</servlet-mapping>
+	
+			<servlet-mapping>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<url-pattern>/viewAll.do</url-pattern>
+	</servlet-mapping>
+	
+	
+			<servlet-mapping>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<url-pattern>/delete.do</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

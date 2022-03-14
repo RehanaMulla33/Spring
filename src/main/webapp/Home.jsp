@@ -11,11 +11,12 @@
 	<br>
 	<form action="item.do" method="post">
 
-		<a href="AddItem.jsp">Clicke here to add Item</a><br><br>
-				<a href="Search.jsp"> search Item</a><br><br>
-						<a href="Update.jsp"> update Item</a><br><br>
-		
-		
+		<a href="AddItem.jsp">Clicke here to add Item</a><br>
+		<br> <a href="Search.jsp"> search Item</a><br>
+		<br> <a href="Update.jsp"> update Item</a><br>
+		<br> <a href="ViewAll.jsp"> ViewAll Item</a><br>
+		<br> <a href="Delete.jsp"> Delete Item</a><br>
+		<br>
 	</form>
 </body>
 </html>

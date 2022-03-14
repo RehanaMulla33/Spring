@@ -56,6 +56,18 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/jstl/jstl/1.2/74aca283cd4f4b4f3e425f5820cda58f44409547/jstl-1.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/javax.servlet/jstl/1.2/74aca283cd4f4b4f3e425f5820cda58f44409547/jstl-1.2.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/javax.servlet/jstl/1.2/2f5877ef15adb721421e80f5aa2b6fe069eec8ed/jstl-1.2-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.3.15/195966e1f4260f89696e668856ebfd9a1bc76404/spring-aop-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.3.15/a6556fb37b783fd4166627293b9e862d2cc3828f/spring-aop-5.3.15-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>

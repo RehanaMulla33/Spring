@@ -19,16 +19,16 @@ public class SearckController {
 	public SearckController() {
 		System.out.println("create Grocerybean" + this.getClass().getSimpleName());
 	}
+
 	@RequestMapping("/search.do")
-	public String onSearch(@RequestParam String groceryName,Model model) {
-		GroceryDTO dto=this.groceryService.validateAndfindByName(groceryName);
-		
-		if(dto!=null) {
+	public String onSearch(@RequestParam String groceryName, Model model) {
+		GroceryDTO dto = this.groceryService.validateAndfindByName(groceryName);
+
+		if (dto != null) {
 			model.addAttribute("grocery", dto);
 			System.out.println(dto.toString());
 
-		}
-		else {
+		} else {
 			model.addAttribute("message", "grocery is not found");
 		}
 		return "/Search.jsp";

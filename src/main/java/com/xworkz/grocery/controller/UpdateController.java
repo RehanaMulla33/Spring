@@ -19,17 +19,19 @@ public class UpdateController {
 		System.out.println("create Grocerybean updation" + this.getClass().getSimpleName());
 	}
 
+	
 	@RequestMapping("/update.do")
-	public String onUpdate(@RequestParam String name, @RequestParam String brand, Model model) {
-		GroceryDTO dto = this.groceryService.validateAndUpdateByBrand(name, brand);
-		if (dto != null) {
-			model.addAttribute("grocery", dto);
-			int total=(int) (dto.getQuantity()*dto.getPrice());
-			model.addAttribute("messageTotal", "Total :  " + total);
-			model.addAttribute("message", " updated :  " + name);
+	public String onUpdate(@RequestParam String name, @RequestParam int quantity, @RequestParam float price,
+			@RequestParam String type, @RequestParam String brand, Model model) {
+		System.out.println("Invoked onUpdateGroceryButton");
 
+		GroceryDTO result = this.groceryService.validateAndUpdateByName(name, quantity, price, type, brand);
+		if (result==null) {
+			model.addAttribute("message", "Grocery details have been updated");
+			model.addAttribute(name, result);
 		} else {
-			model.addAttribute("message", "grocery is not updated");
+			model.addAttribute("message", " failed to updated Grocery details");
+
 		}
 		return "/Update.jsp";
 

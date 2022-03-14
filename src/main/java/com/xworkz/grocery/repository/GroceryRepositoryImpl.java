@@ -1,5 +1,7 @@
 package com.xworkz.grocery.repository;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
 import javax.persistence.EntityManagerFactory;
@@ -60,17 +62,24 @@ public class GroceryRepositoryImpl implements GroceryRepository {
 		}
 	}
 
-	public GroceryEntity updateByBrand(String name,String brand) {
+	public GroceryEntity upadteByName(GroceryEntity entity) {
+		System.out.println("invoked update repo");
+
 		EntityManager manager = this.entityManagerFactory.createEntityManager();
 		EntityTransaction transaction = manager.getTransaction();
+
 		try {
-			Query query = manager.createNamedQuery("updateByBrand");
-			query.setParameter("nm", name);
-			query.setParameter("bnd", brand);
+			manager.getTransaction().begin();
+			Query query = manager.createNamedQuery("upadteByName");
+			query.setParameter("nm", entity.getName());
+			query.setParameter("qty", entity.getQuantity());
+			query.setParameter("ps", entity.getPrice());
+			query.setParameter("ty", entity.getType());
+			query.setParameter("bnd", entity.getBrand());
 
 			Object obj = query.executeUpdate();
 			transaction.commit();
-			
+
 		} catch (PersistenceException e) {
 			transaction.rollback();
 			e.printStackTrace();
@@ -79,6 +88,55 @@ public class GroceryRepositoryImpl implements GroceryRepository {
 				manager.close();
 			}
 		}
+		return GroceryRepository.super.upadteByName(entity);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<GroceryEntity> getAll() {
+		System.out.println("Invoked getAll()");
+		EntityManager manager = this.entityManagerFactory.createEntityManager();
+		try {
+			Query query = manager.createNamedQuery("getAll");
+
+			return (List<GroceryEntity>) query.getResultList();
+
+		} catch (PersistenceException e) {
+			e.printStackTrace();
+		} finally {
+			if (manager != null) {
+				manager.close();
+			}
+		}
+
 		return null;
+
+	}
+
+	@Override
+	public boolean deleteByName(String name) {
+		System.out.println("Invoked deleteGroceryByName()");
+		EntityManager manager = this.entityManagerFactory.createEntityManager();
+
+		EntityTransaction transaction = manager.getTransaction();
+
+		try {
+			manager.getTransaction().begin();
+			Query query = manager.createNamedQuery("deleteByName");
+			query.setParameter("nm", name);
+
+			query.executeUpdate();
+			transaction.commit();
+
+		} catch (PersistenceException e) {
+			transaction.rollback();
+			e.printStackTrace();
+		} finally {
+			if (manager != null) {
+				manager.close();
+			}
+
+		}
+		return false;
 	}
 }

@@ -37,33 +37,77 @@
 			</select>
 		</div>
 		<div>
-			<label>Name</label><input type="text" value="${grocery.name }"
-				name="name" disabled="disabled" />
-		</div>
-		<div>
-			<label>Quantity</label><input type="text" value="${grocery.quantity }"
-				name="quantity" />
-		</div>
-		<div>
-			<label>Price</label><input type="text" value="${grocery.price }"
-				name="price" />
-		</div>
-		<div>
-			<label>Type</label><input type="text" value="${grocery.type }"
-				name="type" />
-		</div>
-		<div>
-			<label>Brand</label><input type="text" value="${grocery.brand}"
-				name="brand" />
-		</div>
-		<div>
-			<label> Total</label><input type="text" name="">
-		</div>
-		<input type="submit" value="update">
-	</form>
-	<a href="Home.jsp">Home</a>
-	<br>
-	<br>
+			<label>Quantity</label><select name="quantity" id="quantity">
+				<option value="select">select</option>
 
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+			</select>
+		</div>
+		<div>
+			<label>Price</label> <input type="text" name="price" />
+		</div>
+		<div>
+			<label>Type</label> <select name="type" id="type">
+				<option value="select">select</option>
+
+				<option value="vegtables">vegtables</option>
+				<option value="Bread">--Bread/Bakery --</option>
+				<option value="Breakfast">--Breakfast--</option>
+				<option value="Drinks">--Drinks --</option>
+				<option value="Frozen">--Frozen--</option>
+				<option value="Dairy">--Dairy/Fridge--</option>
+				<option value="Dal">--Dal-</option>
+				<option value="Oils">--Oils--</option>
+				<option value="Personal">--Personal--</option>
+				<option value="Paper">--Paper/Plastic --</option>
+				<option value="HouseHld">--HouseHld--</option>
+				<option value="BabyFood">--BabyFood--</option>
+				<option value="Snacks">--Snacks --</option>
+			</select>
+		</div>
+		<div>
+			<label>Brand</label> <select name="brand" id="brand">
+				<option value="select">select</option>
+
+				<option value="Kissan">Kissan</option>
+				<option value="Amul">--Amul --</option>
+				<option value="Haldiram's">--Haldiram's--</option>
+				<option value="Britannia">--Britannia --</option>
+				<option value="Kissan">--Kissan--</option>
+				<option value="MTR">--MTR--</option>
+				<option value="Balaji">--Balaji --</option>
+				<option value="MDH">--MDH--</option>
+				<option value="Rooh">--Rooh Afza--</option>
+				<option value="Vadilal">--Vadilal --</option>
+				<option value="White">--White Owl--</option>
+				<option value="Mother">--Mother dairy--</option>
+				<option value="DiSano">--DiSano --</option>
+				<option value="DiSano">--Pet --</option>
+
+			</select>
+		</div>
+		<input type="submit" value="updateItem">
+
+	</form>
+	<h2>${message}</h2>
+	<label>Name :</label>${grocery.name}<br>
+	<label>Quantity:</label>${grocery.quantity}<br>
+	<label>Price :</label>${grocery.price}<br>
+	<label>Type :</label>${grocery.type}<br>
+	<label>Brand :</label>${grocery.brand}<br>
+	<br>
+	<br>
 </body>
 </html>
