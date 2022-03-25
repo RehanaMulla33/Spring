@@ -1,13 +1,14 @@
 package com.xworkz.laptop.dto;
 
+import lombok.Data;
 import lombok.NoArgsConstructor;
-
+@Data
 @NoArgsConstructor
 public class LaptopDTO {
 	private String name;
 	private String brand;
 	private String color;
-	private double price;
+	private float price;
 	private int ram;
 	private int rom;
 	private String hardDisk;
@@ -29,7 +30,7 @@ public class LaptopDTO {
 		this.color = color;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		System.out.println("Invoked setPrice().setting the value");
 		this.price = price;
 	}
@@ -50,11 +51,6 @@ public class LaptopDTO {
 	}
 	
 
-	@Override
-	public String toString() {
-		return "LaptopDTO [name=" + name + ", brand=" + brand + ", color=" + color + ", price=" + price + ", ram=" + ram
-				+ ", rom=" + rom + ", hardDisk=" + hardDisk + "]";
-	}
 
 	public String getName() {
 		return name;
@@ -68,7 +64,7 @@ public class LaptopDTO {
 		return color;
 	}
 
-	public double getPrice() {
+	public float getPrice() {
 		return price;
 	}
 

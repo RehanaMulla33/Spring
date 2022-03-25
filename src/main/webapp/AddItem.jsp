@@ -15,12 +15,12 @@
 				<option value="select">select</option>
 
 				<option value="Dell">Dell</option>
-				<option value="Apple">--Apple--</option>
-				<option value="HP">--HP--</option>
-				<option value="Lenovo">--Lenovo --</option>
-				<option value="ASUS">--ASUS--</option>
-				<option value="Alenware">--Alenware--</option>
-				<option value="A">--AI--</option>
+				<option value="Apple">Apple</option>
+				<option value="HP">HP</option>
+				<option value="Lenovo">Lenovo</option>
+				<option value="ASUS">ASUS</option>
+				<option value="Alenware">Alenware</option>
+				<option value="A">AI</option>
 			</select>
 		</div>
 		<div>
@@ -69,7 +69,7 @@
 		<input type="submit" value="Submit">
 
 	</form>
-	<a href="Laptop.jsp">Laptop</a>
+
 
 
 </body>

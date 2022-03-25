@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 
@@ -16,6 +18,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Table(name = "laptop_entity")
+@NamedQueries({
+	@NamedQuery(name = "findByName", query = "select laptop from LaptopEntity laptop where laptop.name=:nm"),
+	@NamedQuery(name = "deleteByName", query = "delete from LaptopEntity laptop where laptop.name=:nm"),
+	@NamedQuery (name="getAll", query="select laptop from LaptopEntity laptop"),
+	@NamedQuery(name = "upadteByName", query = "update LaptopEntity  set name=:nm,brand=:bnd,color=:clr,price=:ps,ram=:ram, rom=:ram,hardDisk=:hd where name= :nm")
+	})
+
 public class LaptopEntity {
 	@Id
 	@Column(name = "l_id")
@@ -28,7 +37,7 @@ public class LaptopEntity {
 	@Column(name = "l_color")
 	private String color;
 	@Column(name = "l_price")
-	private double price;
+	private float price;
 	@Column(name = "l_ram")
 	private int ram;
 	@Column(name = "l_rom")
@@ -36,7 +45,7 @@ public class LaptopEntity {
 	@Column(name = "l_hardDisk")
 	private String hardDisk;
 
-	public LaptopEntity(String name, String brand, String color, double price, int ram, int rom, String hardDisk) {
+	public LaptopEntity(String name, String brand, String color, float price, int ram, int rom, String hardDisk) {
 		super();
 		this.name = name;
 		this.brand = brand;
