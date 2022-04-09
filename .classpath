@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="src" output="bin/main" path="src/main/java">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context-support/5.3.15/8e0326503c9f83fc447c00818212edc246daa455/spring-context-support-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context-support/5.3.15/ab00e7521ebafaae97e262cc32a9aabe2d083f7c/spring-context-support-5.3.15-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/5.3.15/28307dda4cb5fbeb6f7d7e7c846f464da0eba955/spring-webmvc-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/5.3.15/7731282caba946d98cfbcc5b176d668e12d0b81d/spring-webmvc-5.3.15-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/com.sun.mail/javax.mail/1.5.3/a6ab2437933757407082cb86aaeb655549296067/javax.mail-1.5.3.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/com.sun.mail/javax.mail/1.5.3/cce488a0fd790ac67ce658d66199ec9f5e194398/javax.mail-1.5.3-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.3.15/80a12b7dcb3332fbd65c3649249fd35561ffc561/spring-context-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.3.15/8125c970956582e842813c285ffa03f8271786bd/spring-context-5.3.15-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.3.15/195966e1f4260f89696e668856ebfd9a1bc76404/spring-aop-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.3.15/a6556fb37b783fd4166627293b9e862d2cc3828f/spring-aop-5.3.15-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/a228b373eff7fe34e868827ab02c91b8bf7a643e/spring-web-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.3.15/a88e2ccfe8b131bcff2e643b90d52f6d928e7369/spring-beans-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.3.15/ed228a436e0479d8d2b40178f8bdea71f03d5511/spring-beans-5.3.15-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/5.3.15/362f36bbc4c4b46cc2e4f219df22d08945000c2/spring-expression-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/5.3.15/7ad023938557b4e0d38e4deecb61ffab8d3551e7/spring-expression-5.3.15-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.3.15/e813c2311465672d3089fc7be8dbbadb04e64d6b/spring-core-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.3.15/cc478c6b0ee238956f6be48b41ca7bfd53b52bd4/spring-core-5.3.15-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/e6cb541461c2834bdea3eb920f1884d1eb508b50/activation-1.1.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/3697e9f67a2ed7ac5f589cff30f21173299440/activation-1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.3.15/88da960b4fcbd28621aea8b9911976adc06afce4/spring-jcl-5.3.15.jar" sourcepath="C:/Users/rehan/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.3.15/16ad4353ffd4aec693163fd7a876dc520b095cbd/spring-jcl-5.3.15-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin/default"/>
+</classpath>
